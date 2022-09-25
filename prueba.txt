@@ -4,4 +4,3 @@ as faf a a
 f a
 f a f
 asf asfa
-Esto es una prueba
