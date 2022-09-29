@@ -12,10 +12,12 @@
 - name: "Copiar fichero al servidor remoto"
   copy:
     src: fichero.html
-    dest: /var/www/html/fichero.html
+    dest: /var/www/html/fichero3.html
     owner: www-data
     group: www-data
     mode: '0644'
+  notify:
+    - restart apache2
 
 - name: "Copiar fichero de configuración y reiniciar el servicio"
   copy:
@@ -25,4 +27,4 @@
     group: root
     mode: '0644'
   notify:
-    - 
+    - restart apache2
